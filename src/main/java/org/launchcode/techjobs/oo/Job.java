@@ -1,5 +1,6 @@
 package org.launchcode.techjobs.oo;
 
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class Job {
@@ -100,4 +101,57 @@ public class Job {
     public void setCoreCompetency(CoreCompetency coreCompetency) {
         this.coreCompetency = coreCompetency;
     }
+
+//    public String toString() {
+//        ArrayList<Object>jobArray = new ArrayList<>();
+//        jobArray.add(this.name);
+//        jobArray.add(this.employer);
+//        jobArray.add(this.location);
+//        jobArray.add(this.positionType);
+//        jobArray.add(this.coreCompetency);
+//        String dna = "Data not available";
+//        String fullString = "\n ID: 1 \n" +
+//            " Name: " + this.name + "\n" +
+//            " Employer: " + this.employer + "\n" +
+//            " Location: " + this.location + "\n" +
+//            " PositionType: " + this.positionType + "\n" +
+//            " CoreCompetency: " + this.coreCompetency + "\n";
+//        for (Object i : jobArray) {
+//            if (this == null) {
+//                jobArray(i).setValue(dna);
+//            } else {
+//                jobArray(i).setValue(fullString);
+//            }
+//            break;
+//        }
+
+    public String toString() {
+        if(name == "") {
+            name = "Data not available";
+        }
+        if(employer.getValue() == "") {
+            employer.setValue("Data not available");
+        }
+        if(location.getValue() == "") {
+            location.setValue("Data not available");
+        }
+        if(positionType.getValue() == "") {
+            positionType.setValue("Data not available");
+        }
+        if(coreCompetency.getValue() == "") {
+            coreCompetency.setValue("Data not available");
+        }
+        String output = "\nID: 1\n" +
+            "Name: " + this.name + "\n" +
+            "Employer: " + this.employer + "\n" +
+            "Location: " + this.location + "\n" +
+            "PositionType: " + this.positionType + "\n" +
+            "CoreCompetency: " + this.coreCompetency + "\n";
+        return output;
+    }
+
+
+
+
+
 }
