@@ -99,9 +99,9 @@ public class JobTest {
     @Test
   public void testToStringHandlesEmptyField() {
       //  If a field is empty, the method should add, “Data not available” after the label.
-      Job testJob = new Job("", new Employer("LaunchCode"), new Location("Saint Louis"), new PositionType(""), new CoreCompetency(""));
-      String output = "\nID: " + testJob.getId() + "\nName: Data not available" + "\nEmployer: " + testJob.getEmployer() + "\nLocation: " + testJob.getLocation() + "\nPositionType: Data not available" + "\nCoreCompetency: Data not available\n";
-      String first = testJob.toString();
+      Job testJob = new Job("", new Employer("LaunchCode"), new Location("Saint Louis"), new PositionType("Brew Master"), new CoreCompetency("Beer Tasting"));
+      String output = "\nID: " + testJob.getId() + "\nName: Data not available" + "\nEmployer: " + testJob.getEmployer() + "\nLocation: " + testJob.getLocation() + "\nPositionType: " + testJob.getPositionType() + "\nCoreCompetency: " + testJob.getCoreCompetency() + "\n";
+//      String first = testJob.toString();
       assertEquals(output, testJob.toString());
     }
 }

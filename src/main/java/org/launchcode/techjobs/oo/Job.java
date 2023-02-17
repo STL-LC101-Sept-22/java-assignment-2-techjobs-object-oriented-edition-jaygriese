@@ -126,6 +126,21 @@ public class Job {
 //        }
 
     public String toString() {
+//        if(Objects.equals(name, "")) {
+//            name = "Data not available";
+//        }
+//        if(Objects.equals(employer.getValue(), "")) {
+//            employer.setValue("Data not available");
+//        }
+//        if(Objects.equals(location.getValue(), "")) {
+//            location.setValue("Data not available");
+//        }
+//        if(Objects.equals(positionType.getValue(), "")) {
+//            positionType.setValue("Data not available");
+//        }
+//        if(Objects.equals(coreCompetency.getValue(), "")) {
+//            coreCompetency.setValue("Data not available");
+//        }
         if(name == "") {
             name = "Data not available";
         }
@@ -149,6 +164,8 @@ public class Job {
             "CoreCompetency: " + this.coreCompetency + "\n";
         return output;
     }
+
+
 
 
 
