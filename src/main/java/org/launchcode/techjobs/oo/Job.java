@@ -141,19 +141,19 @@ public class Job {
 //        if(Objects.equals(coreCompetency.getValue(), "")) {
 //            coreCompetency.setValue("Data not available");
 //        }
-        if(name == "") {
+        if(name.equals("")) {
             name = "Data not available";
         }
-        if(employer.getValue() == "") {
+        if(employer.getValue().equals("") || employer.getValue() == null) {
             employer.setValue("Data not available");
         }
-        if(location.getValue() == "") {
+        if(location.getValue().equals("") || location.getValue() == null) {
             location.setValue("Data not available");
         }
-        if(positionType.getValue() == "") {
+        if(positionType.getValue().equals("") || positionType.getValue() == null) {
             positionType.setValue("Data not available");
         }
-        if(coreCompetency.getValue() == "") {
+        if(coreCompetency.getValue().equals("") || coreCompetency.getValue() == null) {
             coreCompetency.setValue("Data not available");
         }
         String output = "\nID: 1\n" +
@@ -164,11 +164,4 @@ public class Job {
             "CoreCompetency: " + this.coreCompetency + "\n";
         return output;
     }
-
-
-
-
-
-
-
 }
